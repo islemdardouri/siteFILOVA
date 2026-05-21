@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filova — Trouve ton lien.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- CANVAS 3D fond global -->
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="page-shell">
+
+      <!-- ══════════════════════════════
+           NAVBAR  (wireframe : Navbar — Logo — Navbar)
+      ══════════════════════════════ -->
+      <header class="navbar">
+        <nav class="nav-left">
+          <a href="#hero">Accueil</a>
+          <a href="#about">À propos</a>
+        </nav>
+
+        <a href="#hero" class="brand">
+          <span class="brand-icon">♡</span>
+          Filova
+        </a>
+
+        <nav class="nav-right">
+          <a href="#galerie">Galerie</a>
+          <a href="#studio3d">Studio 3D</a>
+          <a href="#contact" class="btn-nav">S'inscrire</a>
+        </nav>
+      </header>
+
+      <main>
+
+        <!-- ══════════════════════════════
+             HERO  (wireframe : 3 avatars + lignes déco)
+        ══════════════════════════════ -->
+        <section class="hero" id="hero">
+          <div class="hero-bg-lines">
+            <span></span><span></span><span></span>
+          </div>
+
+          <!-- Bulles de chat animées -->
+          <div class="bubbles-wrap" id="bubblesWrap">
+            <div class="chat-bubble cb-left  cb-1">Salut ! 👋</div>
+            <div class="chat-bubble cb-right cb-2">Tu aimes la photo aussi ? 📸</div>
+            <div class="chat-bubble cb-left  cb-3">Oui, c'est ma passion ✨</div>
+            <div class="chat-bubble cb-right cb-4">On se ressemble tellement 💜</div>
+            <div class="chat-bubble cb-left  cb-5">Je pense qu'on peut se parler…</div>
+            <div class="chat-bubble cb-right cb-6">Avec plaisir ! ☕</div>
+            <div class="match-pop">💜 It's a Match !</div>
+          </div>
+
+          <!-- 3 avatars (wireframe) -->
+          <div class="hero-avatars">
+            <div class="avatar-card av-small">
+              <div class="av-photo av-photo-1"></div>
+              <span>Amira</span>
+            </div>
+            <div class="avatar-card av-main">
+              <div class="av-photo av-photo-2"></div>
+              <span>Filova</span>
+              <p class="av-tagline">Trouve ton lien.</p>
+            </div>
+            <div class="avatar-card av-small">
+              <div class="av-photo av-photo-3"></div>
+              <span>Karim</span>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#about" class="btn btn-primary">Découvrir</a>
+            <a href="#studio3d" class="btn btn-ghost">Studio 3D</a>
+          </div>
+        </section>
+
+        <!-- ══════════════════════════════
+             SECTION SPLIT  (wireframe : Photo + texte × 2 rangées)
+        ══════════════════════════════ -->
+        <section class="split-section" id="about">
+
+          <!-- Rangée 1 : Photo gauche · Texte droite -->
+          <div class="split-row">
+            <!-- Rangée 1 -->
+  <div class="split-photo sp-1">
+    <img src="assests/evan-wise-WXjYsdM0_mU-unsplash.jpg" alt="Rencontres authentiques" class="real-photo" />
+    </div>
+
+<!-- Rangée 2 -->
+<div class="split-photo sp-2">
+  <img src="assests/helena-lopes-e3OUQGT9bWU-unsplash.jpg" alt="Moments partagés" class="real-photo" />
+</div>
+            <div class="split-copy">
+              <p class="eyebrow">Notre vision</p>
+              <h2>L'amour mérite<br /><em>plus que des swipes.</em></h2>
+              <p>
+                Filova est née d'une conviction simple : les relations profondes
+                ne naissent pas au hasard. Chaque connexion est pensée, chaque
+                rencontre est humaine.
+              </p>
+              <a href="#galerie" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+
+          <!-- Rangée 2 : Texte gauche · Photo droite -->
+          <div class="split-row split-row-reverse">
+            <div class="split-photo sp-2">
+              <div class="photo-placeholder">
+                <span>Photo</span>
+              </div>
+            </div>
+            <div class="split-copy">
+              <p class="eyebrow">Comment ça marche</p>
+              <h2>Trois étapes vers<br /><em>ta connexion.</em></h2>
+              <p>
+                Crée ton profil authentique, explore des affinités profondes et
+                engage de vraies conversations — sans pression, à ton rythme.
+              </p>
+              <a href="#studio3d" class="btn btn-primary">Commencer</a>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ══════════════════════════════
+             ABOUT / SOCIAL  (wireframe : About — icônes — bouton)
+        ══════════════════════════════ -->
+        <section class="about-section" id="features">
+          <div class="about-inner">
+
+            <div class="about-text">
+              <p class="eyebrow">About</p>
+              <h2>Une plateforme<br />faite pour durer.</h2>
+              <p>
+                Filova est conçue pour les personnes qui cherchent
+                des relations authentiques en Tunisie et au Maghreb.
+                Profils vérifiés, algorithmes d'affinité, espace sécurisé.
+              </p>
+              <!-- Icônes sociales (wireframe : ∞ symboles) -->
+              <div class="social-icons">
+                <a href="#" aria-label="Instagram" class="social-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+                </a>
+                <a href="#" aria-label="TikTok" class="social-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                </a>
+                <a href="#" aria-label="Facebook" class="social-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+              </div>
+              <a href="#galerie" class="btn btn-primary">Voir la galerie</a>
+            </div>
+
+            <div class="about-stats">
+              <div class="stat-card">
+                <span class="stat-num">12K+</span>
+                <span class="stat-label">Membres actifs</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">94%</span>
+                <span class="stat-label">Taux de satisfaction</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">3.2K</span>
+                <span class="stat-label">Connexions formées</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ══════════════════════════════
+             GALERIE  (wireframe : Photo × 3 disposées en grille)
+        ══════════════════════════════ -->
+       <div class="gallery-item gi-wide">
+      <img src="assests/evan-wise-WXjYsdM0_mU-unsplash.jpg" alt="Connexion" class="real-photo" />
+      </div>
+      <div class="gallery-item gi-tall">
+     <img src="assests/helena-lopes-e3OUQGT9bWU-unsplash.jpg" alt="Lien profond" class="real-photo" />
+      </div>
+      <div class="gallery-item gi-small">
+       <img src="assests/taylor-smith-XB_yndXE4ks-unsplash.jpg" alt="Ensemble" class="real-photo" />
+      </div>
+
+        <!-- ══════════════════════════════
+             STUDIO 3D  (intégration Three.js)
+        ══════════════════════════════ -->
+        <section class="studio-section" id="studio3d">
+          <div class="studio-header">
+            <p class="eyebrow">Studio 3D</p>
+            <h2>Votre modèle <em>Blender</em> intégré</h2>
+            <p class="studio-sub">
+              Chargez votre fichier .glb exporté depuis Blender et explorez-le
+              avec les OrbitControls.
+            </p>
+          </div>
+
+          <div class="studio-layout">
+            <div class="viewer-wrap">
+              <canvas id="model-canvas"></canvas>
+              <div class="viewer-badge" id="loadingText">Scène 3D prête ✓</div>
+            </div>
+
+            <div class="control-panel">
+              <h4>Contrôles</h4>
+
+              <div class="ctrl-group">
+                <label>Charger un .glb</label>
+                <input type="file" id="glbInput" accept=".glb,.gltf" />
+                <p class="hint">Blender → Fichier → Exporter → glTF 2.0</p>
+              </div>
+
+              <div class="ctrl-group">
+                <label>Rotation auto</label>
+                <button id="btnRotation" class="ctrl-btn active">⏸ Arrêter</button>
+              </div>
+
+              <div class="ctrl-group">
+                <label>Réinitialiser</label>
+                <button id="btnReset" class="ctrl-btn">↺ Caméra</button>
+              </div>
+
+              <div class="ctrl-group">
+                <label>Couleur d'accent</label>
+                <div class="color-row">
+                  <button class="cdot selected" style="background:#7F77DD" data-c="#7F77DD"></button>
+                  <button class="cdot" style="background:#D4537E" data-c="#D4537E"></button>
+                  <button class="cdot" style="background:#C9A84C" data-c="#C9A84C"></button>
+                  <button class="cdot" style="background:#5DCAA5" data-c="#5DCAA5"></button>
+                </div>
+              </div>
+
+              <div class="tip-box">
+                <strong>Navigation souris</strong>
+                Clic gauche → orbiter<br />
+                Clic droit → déplacer<br />
+                Molette → zoomer
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ══════════════════════════════
+           FOOTER  (wireframe : 3 colonnes + icônes + copyright)
+      ══════════════════════════════ -->
+      <footer class="footer" id="contact">
+        <div class="footer-inner">
+          <div class="footer-col">
+            <strong class="footer-brand">Filova</strong>
+            <p>Trouve ton lien.</p>
+            <p class="footer-small">La plateforme de rencontres<br />authentiques du Maghreb.</p>
+          </div>
+          <div class="footer-col">
+            <strong>Navigation</strong>
+            <a href="#hero">Accueil</a>
+            <a href="#about">À propos</a>
+            <a href="#galerie">Galerie</a>
+            <a href="#studio3d">Studio 3D</a>
+          </div>
+          <div class="footer-col">
+            <strong>Contact</strong>
+            <a href="#">contact@filova.tn</a>
+            <a href="#">+216 00 000 000</a>
+            <div class="footer-socials">
+              <a href="#" aria-label="Instagram" class="social-btn sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+              </a>
+              <a href="#" aria-label="TikTok" class="social-btn sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+              </a>
+              <a href="#" aria-label="Facebook" class="social-btn sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col footer-copy-col">
+  <p class="footer-copy">© 2025 Filova. Tous droits réservés.</p>
+  <a 
+    href="https://www.figma.com/design/XRSnBCLeFwZepSjXPy7Gz3/conception?node-id=0-1&t=tdvOodtb4c5wC3FY-1" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    class="figma-link"
+  >
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+      <path d="M8 24c2.2 0 4-1.8 4-4v-4H8c-2.2 0-4 1.8-4 4s1.8 4 4 4z"/>
+      <path d="M4 12c0-2.2 1.8-4 4-4h4v8H8c-2.2 0-4-1.8-4-4z"/>
+      <path d="M4 4c0-2.2 1.8-4 4-4h4v8H8C5.8 8 4 6.2 4 4z"/>
+      <path d="M12 0h4c2.2 0 4 1.8 4 4s-1.8 4-4 4h-4V0z"/>
+      <circle cx="16" cy="12" r="4"/>
+    </svg>
+    Voir la maquette Figma
+  </a>
+</div>
+        </div>
+      </footer>
+
+    </div><!-- /page-shell -->
+
+    <!-- ══ SCRIPTS ══ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    <script src="scene-bg.js"></script>
+    <script src="scene-model.js"></script>
+    <script src="bubbles.js"></script>
+    <script src="ui.js"></script>
+  </body>
+</html>
